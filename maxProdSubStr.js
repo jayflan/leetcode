@@ -4,8 +4,6 @@ const maxProduct = (numArr) => {
   let currMinProd = 1; // set min value to 1 to be first prod of first input element
   let currMaxProd = 1; // set max in same manner as min
 
-  if(numArr.length < 2) return numArr; //edgecase if input arr is 1 or no values
-    
   for(let i = 0; i < numArr.length; i++) { // iterate once over arr & calc mins/maxes prods for each elem
     const currElem = numArr[i];
     
@@ -27,5 +25,5 @@ const maxProduct = (numArr) => {
 };
 
 // console.log(maxProduct([2,3,-2,4])) // output: 6
-// console.log(maxProduct([3,-1,4]))  //output: 4
-console.log(maxProduct([-2,3,-4])); //output: 24
+console.log(maxProduct([3,-1,4]))  //output: 4
+// console.log(maxProduct([-2,3,-4])); //output: 24
