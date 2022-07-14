@@ -4,7 +4,9 @@
     // sequence.
   //Need two control if scenarios to format for when only
     //one char letter used.  (ex. 't');
-
+  //Remember, concant to string, due to immutablility, uses
+    //more memory, thus using arr then convert to string
+    //can be more efficient
     const testStr = "ccaaatsss";// -> '2c3at3s'
 
     const compress = (s) => {
@@ -31,4 +33,3 @@
     };
     
     console.log(compress(testStr));
-        
