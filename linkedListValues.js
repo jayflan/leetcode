@@ -17,11 +17,19 @@ class Node {
   c.next = d;
   
   
-  //* recursive approach
+  //* recursive approach (added argument)
   const linkedListValues = (head, result = []) => {
     if(head === null) return result;
     result.push(head.val);
     return linkedListValues(head.next, result);
+  };
+
+  //* recursive approach
+  const linkedListValues = (head) => {
+    if(!head) return [];
+    let result = [head.val]
+    if(head.next === null) return result;
+    return result.concat(linkedListValues(head.next));
   };
   
   //* loop approach
